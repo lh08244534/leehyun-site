@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="description" content="Hyun Lee (이현) — doctorant en psychanalyse, UCO Angers. Recherche, CV et carnet de recherche.">
+<style>:root{color-scheme:light;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui,-apple-system,sans-serif}img{max-width:100%}[hidden]{display:none!important}</style>
+<title>이현 · Lee Hyun</title>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;1,6..96,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&family=Gowun+Batang:wght@400;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style id="css">
+/* Layout: one reading column; nav band, profile, CV as date-column ledger, research notes with in-page reader and owner-only editor */
+:root{
+  --paper:#f2f3f0; --ink:#1b2027; --muted:#5d6670; --rule:#cfd3d4; --accent:#2f4b7c; --tint:#e4e8ee; --danger:#9b2c2c;
+  --display:"Bodoni Moda", "Gowun Batang", Georgia, serif;
+  --body:"Source Serif 4", "Gowun Batang", Georgia, serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){--paper:#14181d;--ink:#e6e8ea;--muted:#9aa3ad;--rule:#2c333b;--accent:#8fa9d6;--tint:#1d242c;--danger:#e08a8a;color-scheme:dark}}
+:root[data-theme="dark"]{--paper:#14181d;--ink:#e6e8ea;--muted:#9aa3ad;--rule:#2c333b;--accent:#8fa9d6;--tint:#1d242c;--danger:#e08a8a;color-scheme:dark}
+html:lang(ko){--display:"Gowun Batang", Georgia, serif; --body:"Gowun Batang", Georgia, serif}
+
+body{background:var(--paper);color:var(--ink);font-family:var(--body);font-size:1.0625rem;line-height:1.65}
+.wrap{max-width:46rem;margin:0 auto;padding-inline:1.25rem;padding-block:0 4rem}
+a{color:var(--accent);text-underline-offset:3px}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+
+nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:5;background:var(--paper);display:flex;align-items:center;justify-content:space-between;gap:.75rem 1rem;flex-wrap:wrap;padding-block:1rem;border-bottom:1px solid var(--rule)}
+.brand{display:flex;align-items:center;gap:.6rem;color:var(--ink);text-decoration:none;font-family:var(--mono);font-size:.8rem;letter-spacing:.06em;text-transform:uppercase}
+.brand svg{width:30px;height:30px}
+.links{display:flex;gap:1rem;flex-wrap:wrap;font-family:var(--mono);font-size:.78rem;letter-spacing:.04em}
+.links a{color:var(--muted);text-decoration:none}
+.links a:hover{color:var(--accent)}
+.lang{display:flex;border:1px solid var(--rule);border-radius:4px;overflow:hidden}
+.lang button{all:unset;cursor:pointer;font-family:var(--mono);font-size:.75rem;padding:.25rem .6rem;color:var(--muted)}
+.lang button[aria-pressed="true"]{background:var(--ink);color:var(--paper)}
+
+header.hero{padding-block:3.25rem 2.25rem;display:grid;gap:1rem}
+.eyebrow{font-family:var(--mono);font-size:.75rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+h1{font-family:"Bodoni Moda",Georgia,serif;font-weight:400;font-size:clamp(2.6rem,9vw,4.2rem);line-height:1.02;margin:0}
+h1 .ko{display:block;font-family:"Gowun Batang",serif;font-size:.42em;color:var(--muted);margin-top:.5rem;letter-spacing:.04em}
+.lede{font-size:1.2rem;max-width:36rem;margin:0}
+
+section{padding-block:2.25rem;border-top:1px solid var(--rule)}
+h2{font-family:var(--mono);font-weight:500;font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin:0 0 1.25rem}
+h3.sub{font-family:var(--display);font-weight:400;font-size:1.5rem;margin:2.25rem 0 1rem}
+h3.sub:first-of-type{margin-top:0}
+p{margin:0 0 1rem;max-width:65ch}
+
+.thesis{background:var(--tint);padding:1.5rem;border-radius:2px;display:grid;gap:.5rem}
+.thesis .t{font-family:var(--display);font-style:italic;font-size:1.4rem;line-height:1.3;text-wrap:balance}
+html:lang(ko) .thesis .t{font-style:normal}
+.thesis .m{font-family:var(--mono);font-size:.78rem;color:var(--muted)}
+
+dl.facts{display:grid;grid-template-columns:max-content 1fr;gap:.6rem 1.5rem;margin:1.5rem 0 0}
+dl.facts dt{font-family:var(--mono);font-size:.78rem;color:var(--muted);padding-top:.2rem}
+dl.facts dd{margin:0;min-width:0}
+
+.ledger{list-style:none;margin:0;padding:0;display:grid}
+.ledger li{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding-block:.9rem;border-bottom:1px solid var(--rule)}
+.ledger li:last-child{border-bottom:0}
+.ledger .d{font-family:var(--mono);font-size:.76rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:.25rem}
+.ledger .c{min-width:0;overflow-wrap:anywhere}
+.ledger .h{font-weight:600}
+html:lang(ko) .ledger .h{font-weight:700}
+.ledger .n{color:var(--muted);font-size:.95rem;margin-top:.2rem}
+html:lang(ko) .ledger em{font-style:normal}
+.ledger .src{font-family:var(--mono);font-size:.72rem;color:var(--muted);margin-top:.35rem}
+
+@media (max-width:520px){
+  dl.facts{grid-template-columns:1fr;gap:.1rem} dl.facts dd{margin-bottom:.7rem}
+  .ledger li{grid-template-columns:1fr;gap:.15rem}
+}
+
+/* research notes */
+.jhead{display:flex;justify-content:space-between;align-items:baseline;gap:1rem;flex-wrap:wrap}
+.jhead h2{margin-bottom:1.25rem}
+.btn{font-family:var(--mono);font-size:.78rem;background:none;border:1px solid var(--rule);color:var(--ink);padding:.4rem .75rem;border-radius:2px;cursor:pointer}
+.btn:hover{border-color:var(--accent);color:var(--accent)}
+.btn.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}
+.btn.primary:hover{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.btn.danger{color:var(--danger);border-color:var(--danger)}
+.btn:disabled{opacity:.5;cursor:default}
+.btn.small{font-size:.7rem;padding:.15rem .5rem;margin-top:.5rem}
+.posts{list-style:none;margin:0;padding:0;display:grid}
+.posts li{display:grid;grid-template-columns:7.5rem 1fr;gap:1rem;padding-block:1.1rem;border-bottom:1px solid var(--rule)}
+.posts li:first-child{padding-top:0}
+.posts time{font-family:var(--mono);font-size:.76rem;color:var(--muted);font-variant-numeric:tabular-nums;padding-top:.3rem}
+.posts .body{min-width:0}
+.posts .t{all:unset;cursor:pointer;display:block;font-family:var(--display);font-size:1.3rem;line-height:1.25;margin:0 0 .3rem;text-wrap:balance;color:var(--ink)}
+.posts .t:hover{color:var(--accent)}
+.posts .t:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.posts p{margin:0;color:var(--muted);font-size:.98rem}
+.meta{display:flex;flex-wrap:wrap;gap:.4rem .7rem;align-items:center;margin-top:.45rem;font-family:var(--mono);font-size:.7rem;letter-spacing:.04em}
+.meta .tag{color:var(--accent)}
+.badge{border:1px solid var(--rule);color:var(--muted);padding:0 .35rem;border-radius:2px}
+.badge.sample{border-style:dashed}
+.empty{color:var(--muted);font-size:.98rem}
+.ext{margin:1.25rem 0 0;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+@media (max-width:520px){.posts li{grid-template-columns:1fr;gap:.2rem}}
+
+.reader{display:grid;gap:1rem}
+.reader h3{font-family:var(--display);font-weight:400;font-size:clamp(1.7rem,6vw,2.3rem);line-height:1.15;margin:0;text-wrap:balance}
+.reader .text p{max-width:65ch}
+.reader .actions{display:flex;gap:.6rem;flex-wrap:wrap}
+
+.status{font-family:var(--mono);font-size:.75rem;color:var(--muted)}
+.status.err{color:var(--danger)}
+
+.contact{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.contact code{font-family:var(--mono);font-size:.9rem;background:var(--tint);padding:.35rem .6rem;border-radius:2px;user-select:all}
+.contact .more{flex-basis:100%;font-size:.95rem}
+footer{padding-top:2rem;font-family:var(--mono);font-size:.72rem;color:var(--muted)}
+</style>
+</head>
+<body>
+<template id="tpl">
+<div class="wrap">
+  <nav>
+    <a class="brand" href="#top" aria-label="Lee Hyun">
+      <svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="15" cy="15" r="9"></circle><circle cx="25" cy="15" r="9"></circle><circle cx="20" cy="24" r="9"></circle></svg>
+      <span>Lee Hyun</span>
+    </a>
+    <div class="links">
+      <a href="#recherche" data-k="nav1"></a>
+      <a href="#cv" data-k="nav2"></a>
+      <a href="#journal" data-k="nav3"></a>
+      <a href="#contact" data-k="nav4"></a>
+    </div>
+    <div class="lang" role="group" aria-label="Language">
+      <button id="lang-fr" data-lang="fr" aria-pressed="true">FR</button>
+      <button id="lang-en" data-lang="en" aria-pressed="false">EN</button>
+      <button id="lang-ko" data-lang="ko" aria-pressed="false">한</button>
+    </div>
+  </nav>
+
+  <header class="hero" id="top">
+    <div class="eyebrow" data-k="eyebrow"></div>
+    <h1>Hyun Lee<span class="ko">이현</span></h1>
+    <p class="lede" data-k="lede"></p>
+  </header>
+
+  <section id="recherche">
+    <h2 data-k="hResearch"></h2>
+    <div class="thesis"><span class="t" data-k="thesis"></span><span class="m" data-k="thesisM"></span></div>
+    <dl class="facts" data-k="facts"></dl>
+  </section>
+
+  <section id="cv">
+    <h2 data-k="hCV"></h2>
+    <h3 class="sub" data-k="hEdu"></h3><ul class="ledger" data-k="edu"></ul>
+    <h3 class="sub" data-k="hArt"></h3><ul class="ledger" data-k="art"></ul>
+    <h3 class="sub" data-k="hTr"></h3><ul class="ledger" data-k="tr"></ul>
+    <h3 class="sub" data-k="hPres"></h3><ul class="ledger" data-k="pres"></ul>
+    <h3 class="sub" data-k="hExp"></h3><ul class="ledger" data-k="exp"></ul>
+    <h3 class="sub" data-k="hSch"></h3><ul class="ledger" data-k="sch"></ul>
+  </section>
+
+  <section id="journal">
+    <div class="jhead">
+      <h2 data-k="hJournal"></h2>
+    </div>
+    <div id="list-view"><ul class="posts" id="postlist"></ul><p class="ext" data-k="brunch"></p></div>
+    <article class="reader" id="reader" hidden></article>
+  </section>
+
+  <section id="contact">
+    <h2 data-k="hContact"></h2>
+    <div class="contact">
+      <code id="mail">lh08244534@naver.com</code>
+      <button class="btn" id="copy" type="button" data-k="copy"></button>
+      <p class="more" data-k="uco"></p>
+    </div>
+  </section>
+
+  <footer>© 2026 Hyun Lee · Angers</footer>
+</div>
+</template>
+<div id="app"></div>
+<script type="application/json" id="posts-data">[{"id": "pmv57fhe9", "date": "2025-10-17", "lang": "ko", "title": "멜랑콜리와 공동체", "summary": "본 글은 Roberto Esposito의 « Communauté, immunité, biopolitique »에서 “Mélancolie et communauté”의 일부를 번역한 것이다.", "tags": "#번역", "body": "이 두 용어 사이에는 어떤 관계가 성립하는가? 멜랑콜리는 본질적으로 어떤 «공통된 것»(commun)을 지니고 있다는 것인가? 아니면 그것이 공동체의 형식 그 자체와 관련이 있는가? 멜랑콜리에 관한 문헌은 종종 이 질문에 부정적으로 대답해 왔다. 멜랑콜리가 신체와 정신의 병이라는 병리학적 의미에서든, 혹은 천재적 예외라는 긍정적 의미에서든 간에, 일반적으로 공동체의 틀과는 다른, 아니 전적으로 반대되는 개별적 틀 속에 위치 지어져 왔다. 사실 대부분의 전통적 해석자들—특히 사회학적 영감을 받은 전통의 해석자들—은 멜랑콜리적인 인간을 바로 공동생활에 대한 그의 대립, 즉 정확히 말하자면 비공동적인 존재로서 정의해 왔다. 멜랑콜리적 인간은 병든 자, 비정상적인 자, 천재이기도 한 자이지만—어쨌든 바로 그 때문에—공동체 바깥에 있거나, 혹은 공동체에 반대되는 자로 간주되었다. 그들은 고전적인 아리스토텔레스의 정의에 따르면 인간 일반의 성격, 즉 인간들에게 공통적인 일반적 성격보다는 오히려 짐승이나 신에 더 가까운 자로 여겨졌다. 그리고 실제로, 그것이 아무리 퍼지고, 재생산되고, 무한한 사례와 유형들 속에서 증식되었다 하더라도, 점점 더 많은 개인들에게 확산되었다 하더라도, 멜랑콜리는 언제나 엄격히 개별적인 현상으로 이해되고 다루어져 왔다. 멜랑콜리할 수 있는 것은 오직 개인—혹은 여러 개인들—뿐이며, 사회 자체는 그럴 수 없다고 여겨졌다 왜냐하면 멜랑콜리의 지배적인 특징 중 하나가 바로 반사회성, 고립, 집단적 삶의 거부이기 때문이다. 집단적 삶은, 그것이 실용적이고 생산적이기를 원하며, 질서와 합리성을 요구하기 때문에, 멜랑콜리의 통합을 용납하지 않는 것으로 이해되었다. 그래서 그것으로부터 벗어나기 위해 추방, 억압 혹은 의료화의 방식을 취할 수밖에 없었다. 어쨌든 그 도식적 대립은 여전리 그대로 남아 있다: 멜랑콜리와 공동체는 상호적인 반발의 형태로 사고된다. 하나가 있는 곳에는 다른 하나가 있을 수 없다. 그것들은 실제로 대립될 뿐만 아니라 개념적으로도 양립 불가능하다.\n\n그런데 과연 실제로 그러한가? 멜랑콜리가 공동체의 외부에만 머무르는 것이 정말 사실인가— 혹은 기껏해야 공동체의 맹점들, 집단적 삶의 충만함으로부터 산발적으로 추방되거나 그것으로부터 빼앗긴 비생산적이고 비합리적인 영역들 안에 존재하는가? 사실, 근대의 위대한 철학들—그 이전의 위대한 도상학적·문학적 전통들과 마찬가지로—은 이 단순하고 피상적인 독해를 근본적으로 문제시하였고, 결국 그 출발의 전제를 뒤집어 훨씬 더 문제적인 이미지를 제시하였다. 즉, 오히려 스스로를 향해 접히는, 자기비판을 수행하는 멜랑콜리적 형상이라는 이미지이다. 이는 또한 멜랑콜리가 단순한 분석의 대상이 아니라, 그 분석을 수행하는 주체 자체를 저항할 수 없이 삼키고 되씹으려는 무언가—힘, 재앙, 심연—라는 사실을 새롭게 증명하는 것이다. 그러므로 반대로, 진정한 철학은 언제나 멜랑콜리의 «공통된» 성격을 파악해 왔을 뿐만 아니라 —그 해석의 여정은 이제 잘 알려져 있듯이 교부들로부터 하이데거에 이른다—, 그보다 더욱 중요한 공동체 자체의 원초적, 멜랑콜리적, 찢긴, 분열된 성격을 파악해 왔다. 철학은 언제나 멜랑콜리가 단순한 우발적 질병, 우연한 성격, 혹은 공동체의 단순한 한 요소가 아니라, 그것보다 훨씬 더 본질적으로 공동체와 관련되어 있으며, 심지어 공동체의 형식 그 자체를 구성한다고 이해해 왔다. 멜랑콜리는 공동체의 다른 성향들, 다른 움직임들 혹은 가능성들 가운데 하나를 이루는 것이 아니라, 그것들을 포괄하고 규정하는, 더 정확히 말하자면 공동체를 «결정 décide»하는 어떤 것이다. 멜랑콜리는 공동체를 갈라놓고 그것을 자기 자신으로부터 분리시키며, 바로 이 절단과 간극으로서 공동체를 구성한다. 그 절단과 상처 속에서 공동체는 일시적이거나 부분적인 조건을 경험하는 것이 아니라, 그것의 유일한 존재 방식—그리고 동시에 비존재 방식—을 경험한다. 즉, 공동체는 바로 «부정 non» 그 자체의 형태로 존재한다. 공동체는 존재해야 하지만 바로 그 때문에 존재할 수 없는 것으로 존재한다—결함적이고, 부정적이며, 공허한 방식으로, 자크 라캉이 «존재에의 결여(manque à être)»라 부른, 순수한 결여의 방식으로 존재한다.\n\n바로 여기, 이 최초의 분열, 기원의 균열 속에 멜랑콜리가 자리한다: 공동체 안에도 아니고, 공동체로부터도 아니며, 오히려 공동체로서 자리한다. 즉, 공동체의 존재를 그 본질로부터 분리시키는 원초적 간극으로서, 공동체 스스로가 그것을 넘어설 수 없고, 그 위에서 부딪치고 , 넘을 수 없는 한계로서, 혹은 실현 불가능한 사물—das Ding—로서, 그것은 아무것으로도 이루어져 있기에 실현될 수 없고, 탈취로 구성되어 있기에 결코 소유될 수 없는 사물로서 존재한다. «공통적인 것(le commun)»이란 도대체 무엇인가? 그것은 «고유한 것(le propre)»의 결여가 아닌가? 즉, 비고유한 것(le non-propre)이며, 소유 불가능한 것(l’inappropriable)이 아닌가? 바로 그것이 공동체(communauté)가 파생된 munus 속에 새겨져 있는, 어원적으로 포함된 의미이다. 공동체는 그것을 자신의 고유한 비소속성(non-appartenance)으로, 자신을 구성하는 모든 구성원들의 비소속성 혹은 비고유성으로, 상호적인 변이(altération)의 방식으로 지니고 있다. 이 상호적 변이는 공동체 자체의 변이이기도 하다: 즉, 공동체가 자신이 되려는 것과 항상 다른 존재임, 그 자체로서 구성될 수 없는 무능력, 자신을 파괴하지 않고서는 공동의 작업을 이룰 수 없는 불가능성— 이것이 우리의 공통된 멜랑콜리의 의미이자 뿌리이다. 만약 공동체가 다름 아닌 관계—즉, «함께(avec)» 혹은 «사이(entre)»—라면, 그것은 결코 하나의 주체가 될 수 없다. 그것은 개별적 주체도, 집합적 주체도 아니다. 그것은 «하나의 존재(un être)»가 아니라, 모든 주체를 그들 자신의 동일성으로부터 빼앗고, 그들을 불가피한 타자성에 내맡김으로써 각 주체를 분열시키는 존재-없음(être-rien), 무(néant)이다."}, {"id": "b1", "date": "2025-11-28", "lang": "ko", "title": "04화 타자의 공동체", "summary": "우리는 타자를 어떻게 대해야 하는가?", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/1", "body": ""}, {"id": "b2", "date": "2025-10-16", "lang": "ko", "title": "기계 속 프로이트", "summary": "정신분석이 해독하는 AI (세르주 티세롱의 글 번역)", "tags": "#번역", "url": "https://brunch.co.kr/@96e2f7af998d437/2", "body": ""}, {"id": "b5", "date": "2025-10-26", "lang": "ko", "title": "애도 불능 사회", "summary": "우리는 언제 애도할 수 있을까?", "tags": "", "url": "https://brunch.co.kr/@96e2f7af998d437/5", "body": ""}, {"id": "b6", "date": "2025-11-07", "lang": "ko", "title": "01화 성관계는 존재하지 않는다.", "summary": "구조적 불가능성과 불가능성의 가능성", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/6", "body": ""}, {"id": "b7", "date": "2025-11-14", "lang": "ko", "title": "02화 분석가는 도구이다.", "summary": "분석가의 원칙 - 1 : 나를 도구화시키기", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/7", "body": ""}, {"id": "b8", "date": "2025-11-17", "lang": "ko", "title": "에드의 꿈", "summary": "[노인을 위한 나라는 없다]에 대한 분석적 비평", "tags": "#비평", "url": "https://brunch.co.kr/@96e2f7af998d437/8", "body": ""}, {"id": "b9", "date": "2025-11-21", "lang": "ko", "title": "03화 무지의 정념과 선문답", "summary": "무지와 생성, 그리고 분석가의 사랑", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/9", "body": ""}, {"id": "b10", "date": "2025-12-05", "lang": "ko", "title": "05화 AI 시대의 주체", "summary": "욕망과 알고리즘", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/10", "body": ""}, {"id": "b11", "date": "2025-12-12", "lang": "ko", "title": "06화 결여의 결여", "summary": "자본주의는 들뢰즈-니체를 어떻게 소비하는가?", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/11", "body": ""}, {"id": "b12", "date": "2025-12-19", "lang": "ko", "title": "07화 정신병(psychose)란 무엇인가? (1)", "summary": "정신병에 대한 정신병리학적 접근", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/12", "body": ""}, {"id": "b13", "date": "2026-01-02", "lang": "ko", "title": "08화 정신병(psychose)란 무엇인가? (2)", "summary": "정신병들인가, 아니면 단일한 '정신병'인가", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/13", "body": ""}, {"id": "b14", "date": "2026-01-09", "lang": "ko", "title": "09화 정신병(psychose)란 무엇인가? (3)", "summary": "두 가지 접근: 기술적(묘사적) 접근 vs. 해석적(설명적) 접근", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/14", "body": ""}, {"id": "b15", "date": "2026-01-16", "lang": "ko", "title": "10화 정신병(psychose)란 무엇인가? (4)", "summary": "분류 두 유형: \"증후군적/분류학적 분류\" vs. \"정신병리학적 분류\"", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/15", "body": ""}, {"id": "b17", "date": "2026-01-30", "lang": "ko", "title": "12화 애도란 무엇인가?", "summary": "불가능한 애도의 의미", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/17", "body": ""}, {"id": "b18", "date": "2026-02-28", "lang": "ko", "title": "13화 분석가가 된다는 것은", "summary": "행위로서의 분석가", "tags": "#정신분석적에세이", "url": "https://brunch.co.kr/@96e2f7af998d437/18", "body": ""}]</script>
+<script id="main">
+document.getElementById('app').appendChild(document.getElementById('tpl').content.cloneNode(true));
+
+let POSTS=[];
+try{POSTS=JSON.parse(document.getElementById('posts-data').textContent)||[]}catch(e){POSTS=[]}
+
+const UCO='https://recherche.uco.fr/fr/doctorant/hyun-lee';
+const BRUNCH='https://brunch.co.kr/@96e2f7af998d437';
+const doi=d=>`<a href="https://doi.org/${d}">doi:${d}</a>`;
+const JL='<em>The Journal of Contemporary Psychoanalysis</em>';
+const li=rows=>rows.map(([d,c])=>`<li><span class="d">${d}</span><div class="c">${c}</div></li>`).join('');
+const facts=rows=>rows.map(([t,d])=>`<dt>${t}</dt><dd>${d}</dd>`).join('');
+const isbn=['979-11-90855-48-8','979-11-90855-49-5','979-11-90855-51-8','979-11-90855-50-1'];
+const trOrig=[["Aïda N’Diaye","Ai-je vraiment du mérite ?"],["Aurélien Robert","Mais qu'est-ce que tu t'imagines ?"],["Camille Riquier","Est-ce que tu sais ou est-ce que tu crois ?"],["Aïda N’Diaye","Qu'est-ce qui fait mon genre ?"]];
+const dois=['10.18873/jlcp.2021.08.23.2.79','10.18873/jlcp.2023.08.25.2.159','10.18873/jlcp.2025.08.27.2.221'];
+
+const T={
+fr:{
+  nav1:"Recherche",nav2:"CV",nav3:"Carnet",nav4:"Contact",
+  eyebrow:"Doctorant en psychanalyse · UCO Angers",
+  lede:"Après des études de philosophie en Corée, je mène aujourd’hui des recherches en psychanalyse en France. Je m’attache surtout à une psychanalyse philosophique de la société contemporaine.",
+  hResearch:"Recherche",
+  thesis:"Nancy avec Lacan, la possibilité d'une nouvelle pratique communautaire : le partage du vide et la participation du vide",
+  thesisM:"Thèse de doctorat en psychanalyse, depuis 2024 · Direction : Dr Alexandre Lévy (MCF-HDR)",
+  facts:facts([
+    ["Rattachement","Laboratoire RPpsy (EA 4050), Université Catholique de l’Ouest, Angers"],
+    ["Spécialités","Psychanalyse ; philosophie européenne contemporaine"],
+    ["Compétences","Théorie psychanalytique ; philosophie politique et éthique ; théorie critique"]]),
+  hCV:"Curriculum vitae",hEdu:"Formation",
+  edu:li([
+    ["2024 –","<div class='h'>Doctorat en psychanalyse</div><div class='n'>Université Catholique de l’Ouest, Angers</div>"],
+    ["2022","<div class='h'>Master en philosophie occidentale</div><div class='n'>Université Konkuk, Séoul · Mention Très Bien (GPA 4,31/4,5) · obtenu en 3 semestres</div><div class='n'>Mémoire : <em>Le sujet-entre-deux-morts chez Jacques Lacan : l’horizon éthique du désir et de la pulsion</em> (dir. Pr Seok Kim)</div>"],
+    ["2021","<div class='h'>Licence en philosophie</div><div class='n'>Université Konkuk, Séoul</div>"]]),
+  hArt:"Articles (Korea Citation Index)",
+  art:li([
+    ["2025",`<div class='h'>Subjectivity after Neoliberal Capitalism and the Age of Ordinary Psychosis: Lacan’s Theoretical Shift in Response to the May ’68 Revolution</div><div class='n'>${JL}, vol. 27, n° 2, p. 221–256</div><div class='src'>${doi(dois[2])}</div>`],
+    ["2023",`<div class='h'>Le néolibéralisme et la société psychotique : l’individu néolibéral et la disparition de l’impossible à travers le discours du capitaliste chez Lacan</div><div class='n'>${JL}, vol. 25, n° 2, p. 159–194</div><div class='src'>${doi(dois[1])}</div>`],
+    ["2021",`<div class='h'>L’amour comme condition du sujet analytique : centré sur le concept lacanien de « l’amour de l’analyste » et le problème de la spiritualité</div><div class='n'>${JL}, vol. 23, n° 2, p. 79–109</div><div class='src'>${doi(dois[0])}</div>`]]),
+  hTr:"Traductions (français → coréen)",
+  tr:li(trOrig.map(([a,t],i)=>["2025",`<div class='h'><em>${t}</em></div><div class='n'>${a} · éd. orig. Gallimard Jeunesse, 2022 · Éditions Dolbaenamu, Séoul</div><div class='src'>ISBN ${isbn[i]}</div>`])),
+  hPres:"Communications",
+  pres:li([
+    ["mai 2026","<div class='h'>La recherche pour-quoi ? Le discours du chercheur dans la tension entre savoir et ignorance</div><div class='n'>2ᵉ Journée doctorale UCO RPpsy « Rechercher, chercher ailleurs », Université Catholique de l’Ouest</div>"],
+    ["juil. 2024","<div class='h'>La position de l’autre et le problème du désir dans le discours communautaire : la communauté désœuvrée de Jean-Luc Nancy reconceptualisée en termes lacaniens</div><div class='n'>Colloque national BK21 (niveau 4), Département de philosophie, Université Konkuk</div>"],
+    ["juil. 2022","<div class='h'>Explorer les possibilités de l’espace communautaire à travers l’hétérotopie</div><div class='n'>Colloque national BK21 (niveau 4), Université Konkuk</div>"],
+    ["oct. 2021","<div class='h'>Entre philosophes et psychanalystes : questions pratiques sur les relations entre philosophie et psychanalyse</div><div class='n'>Colloque conjoint, Université Konkuk et Département de psychanalyse, Université Ajou, « L’âge de la guérison et de la coexistence »</div>"],
+    ["juil. 2021","<div class='h'>L’amour comme condition du sujet analytique</div><div class='n'>Colloque national BK21, Université Konkuk ; 3ᵉ rencontre de l’Alliance universitaire de la prochaine génération en philosophie orientale, Université Sungkyunkwan</div>"]]),
+  hExp:"Expérience de recherche",
+  exp:li([
+    ["2023 – 2025","<div class='h'>Chercheur principal</div><div class='n'>Bourse de recherche doctorale en sciences humaines et sociales, National Research Foundation of Korea</div>"],
+    ["2021 – 2024","<div class='h'>Étudiant participant</div><div class='n'>Équipe de recherche en éducation BK21 (niveau 4), Département de philosophie, Université Konkuk (2021, 2022, 2023–2024)</div>"]]),
+  hSch:"Bourses",
+  sch:li([
+    ["2021 – 2022","Bourse du programme d’admission préparatoire au master (3 semestres)"],
+    ["2021, 2022","Bourses BK21 (niveau 4), Université Konkuk"],
+    ["2020","Fonds Pr Jeong-ok Kim : bourse de soutien à la prochaine génération de chercheurs"],
+    ["2019","Fonds Pr Jeong-ok Kim : bourse de langue européenne, trois mois d’études de français à Nantes"]]),
+  hJournal:"Carnet de recherche",
+  sample:"exemple",back:"← Retour au carnet",empty:"Aucun billet pour l’instant.",
+  hContact:"Contact",copy:"Copier l’adresse",copied:"Copiée",
+  brunch:`D’autres textes, en coréen, sur <a href="${BRUNCH}">Brunch →</a>`,
+  uco:`Page doctorant à l’UCO : <a href="${UCO}">recherche.uco.fr</a><br>Brunch : <a href="${BRUNCH}">brunch.co.kr/@96e2f7af998d437</a>`
+},
+en:{
+  nav1:"Research",nav2:"CV",nav3:"Notes",nav4:"Contact",
+  eyebrow:"PhD candidate in psychoanalysis · UCO Angers",
+  lede:"I studied philosophy in Korea and now research psychoanalysis in France. My work is mainly an attempt at a philosophical psychoanalysis of contemporary society.",
+  hResearch:"Research",
+  thesis:"Nancy with Lacan: The Possibility of a New Communal Practice — Sharing the Void and Participation of the Void",
+  thesisM:"PhD dissertation in psychoanalysis, since 2024 · Supervisor: Dr Alexandre Lévy (MCF-HDR)",
+  facts:facts([
+    ["Affiliation","RPpsy Research Laboratory (EA 4050), Catholic University of the West, Angers"],
+    ["Specialization","Psychoanalysis; contemporary European philosophy"],
+    ["Competence","Psychoanalytic theory; political philosophy and ethics; critical theory"]]),
+  hCV:"Curriculum vitae",hEdu:"Education",
+  edu:li([
+    ["2024 –","<div class='h'>PhD in Psychoanalysis</div><div class='n'>Catholic University of the West, Angers</div>"],
+    ["2022","<div class='h'>MA in Western Philosophy</div><div class='n'>Konkuk University, Seoul · Very Good (GPA 4.31/4.5) · completed in 3 semesters</div><div class='n'>Thesis: <em>The Subject between Two Deaths in Jacques Lacan: The Ethical Horizon of Desire and Drive</em> (supervisor Prof. Seok Kim)</div>"],
+    ["2021","<div class='h'>BA in Philosophy</div><div class='n'>Konkuk University, Seoul</div>"]]),
+  hArt:"Journal articles (Korea Citation Index)",
+  art:li([
+    ["2025",`<div class='h'>Subjectivity after Neoliberal Capitalism and the Age of Ordinary Psychosis: Lacan’s Theoretical Shift in Response to the May ’68 Revolution</div><div class='n'>${JL}, vol. 27, no. 2, pp. 221–256</div><div class='src'>${doi(dois[2])}</div>`],
+    ["2023",`<div class='h'>Neoliberalism and Psychotic Society: The Neoliberal Individual and the Disappearance of the Impossible through Lacan’s Capitalist Discourse</div><div class='n'>${JL}, vol. 25, no. 2, pp. 159–194</div><div class='src'>${doi(dois[1])}</div>`],
+    ["2021",`<div class='h'>Love as a Condition of the Analytic Subject: Focusing on the Lacanian Concept of the “Analyst’s Love” and the Problem of Spirituality</div><div class='n'>${JL}, vol. 23, no. 2, pp. 79–109</div><div class='src'>${doi(dois[0])}</div>`]]),
+  hTr:"Translations (French → Korean)",
+  tr:li(["Do I Really Deserve Credit?","What Are You Imagining?","Do You Know or Do You Believe?","What Makes My Gender?"].map((e,i)=>["2025",`<div class='h'><em>${trOrig[i][1]}</em></div><div class='n'>${trOrig[i][0]} · “${e}” · original ed. Gallimard Jeunesse, 2022 · Dolbaenamu, Seoul</div><div class='src'>ISBN ${isbn[i]}</div>`])),
+  hPres:"Presentations",
+  pres:li([
+    ["May 2026","<div class='h'>Research — What For? The Researcher’s Discourse in the Tension between Knowledge and Ignorance</div><div class='n'>Second UCO RPpsy Doctoral Day, “Researching, Searching Elsewhere”, Catholic University of the West</div>"],
+    ["Jul 2024","<div class='h'>The Position of the Other and the Problem of Desire in Community Discourse: Jean-Luc Nancy’s Inoperative Community Reconceived in Lacanian Terms</div><div class='n'>National Conference, BK21 Phase 4 Team, Department of Philosophy, Konkuk University</div>"],
+    ["Jul 2022","<div class='h'>Exploring the Possibilities of Communal Space through Heterotopia</div><div class='n'>National Conference, BK21 Phase 4 Team, Konkuk University</div>"],
+    ["Oct 2021","<div class='h'>Between Philosophers and Psychoanalysts: Practical Questions on the Relationship between Philosophy and Psychoanalysis</div><div class='n'>Joint Conference, Konkuk University and Department of Psychoanalysis, Ajou University, “The Age of Healing and Coexistence”</div>"],
+    ["Jul 2021","<div class='h'>Love as a Condition of the Analytic Subject</div><div class='n'>National Conference, BK21 Phase 4 Team, Konkuk University; Third Forum of the University Alliance for the Next Generation of Scholars in Eastern Philosophy, Sungkyunkwan University</div>"]]),
+  hExp:"Research experience",
+  exp:li([
+    ["2023 – 2025","<div class='h'>Principal Investigator</div><div class='n'>Doctoral Research Fellowship in Humanities and Social Sciences, National Research Foundation of Korea</div>"],
+    ["2021 – 2024","<div class='h'>Participating Graduate Student</div><div class='n'>BK21 Phase 4 Education and Research Team, Department of Philosophy, Konkuk University (2021, 2022, 2023–2024)</div>"]]),
+  hSch:"Scholarships",
+  sch:li([
+    ["2021 – 2022","Preparatory Master’s Admission Programme Scholarship (3 semesters)"],
+    ["2021, 2022","BK21 Phase 4 scholarships, Konkuk University"],
+    ["2020","Prof. Jeong-ok Kim Scholarship Fund: support for the next generation of scholars"],
+    ["2019","Prof. Jeong-ok Kim Scholarship Fund: European language training, three months of French study in Nantes"]]),
+  hJournal:"Research notes",
+  sample:"sample",back:"← Back to notes",empty:"No posts yet.",
+  hContact:"Contact",copy:"Copy address",copied:"Copied",
+  brunch:`More writing, in Korean, on <a href="${BRUNCH}">Brunch →</a>`,
+  uco:`Doctoral page at UCO: <a href="${UCO}">recherche.uco.fr</a><br>Brunch: <a href="${BRUNCH}">brunch.co.kr/@96e2f7af998d437</a>`
+},
+ko:{
+  nav1:"연구",nav2:"이력",nav3:"연구 노트",nav4:"연락",
+  eyebrow:"정신분석 박사과정 · 앙제 서부가톨릭대학교",
+  lede:"한국에서 철학을 전공했고, 현재 프랑스에서 정신분석을 연구하고 있습니다. 주로 현대 사회에 대한 철학적 정신분석을 시도합니다.",
+  hResearch:"연구",
+  thesis:"라캉과 함께하는 낭시, 새로운 공동체적 실천의 가능성: 공백의 나눔과 공백에의 참여",
+  thesisM:"정신분석 박사학위논문, 2024년부터 · 지도교수 알렉상드르 레비 (MCF-HDR)",
+  facts:facts([
+    ["소속","앙제 서부가톨릭대학교(UCO) RPpsy 연구소 (EA 4050)"],
+    ["전공 분야","정신분석, 현대 유럽철학"],
+    ["연구 역량","정신분석 이론, 정치철학과 윤리학, 비판이론"]]),
+  hCV:"이력",hEdu:"학력",
+  edu:li([
+    ["2024 –","<div class='h'>정신분석 박사과정</div><div class='n'>앙제 서부가톨릭대학교</div>"],
+    ["2022","<div class='h'>서양철학 석사</div><div class='n'>건국대학교 · 평점 4.31/4.5 · 3학기 조기 졸업</div><div class='n'>학위논문 「자크 라캉의 두 죽음 사이-주체: 욕망과 충동의 윤리적 지평」 (지도교수 김석)</div>"],
+    ["2021","<div class='h'>철학 학사</div><div class='n'>건국대학교</div>"]]),
+  hArt:"학술지 논문 (KCI)",
+  art:li([
+    ["2025",`<div class='h'>「신자본주의 이후의 주체성과 보통 정신증의 시대: 68혁명에 대한 라캉의 인식 변화와 이론적 전환을 중심으로」</div><div class='n'>『현대정신분석』 27권 2호, 221–256쪽</div><div class='src'>${doi(dois[2])}</div>`],
+    ["2023",`<div class='h'>「신자유주의와 정신증적 사회: 라캉의 자본주의 담론으로 본 신자유주의적 개인과 불가능성의 소멸」</div><div class='n'>『현대정신분석』 25권 2호, 159–194쪽</div><div class='src'>${doi(dois[1])}</div>`],
+    ["2021",`<div class='h'>「분석적 주체의 조건으로서의 사랑: 〈분석가의 사랑〉에 대한 라캉의 개념과 영성의 문제를 중심으로」</div><div class='n'>『현대정신분석』 23권 2호, 79–109쪽</div><div class='src'>${doi(dois[0])}</div>`]]),
+  hTr:"번역 (프랑스어 → 한국어)",
+  tr:li(trOrig.map(([a,t],i)=>["2025",`<div class='h'>${a} 지음</div><div class='n'>원제 <em>${t}</em> · 갈리마르 죄네스, 2022 · 돌배나무, 서울</div><div class='src'>ISBN ${isbn[i]}</div>`])),
+  hPres:"학술 발표",
+  pres:li([
+    ["2026.05","<div class='h'>연구는 무엇을 위하여? 앎과 무지 사이의 긴장 속 연구자의 담론</div><div class='n'>UCO RPpsy 제2회 박사과정 학술대회 「연구하기, 다른 곳에서 찾기」, 앙제 서부가톨릭대학교</div>"],
+    ["2024.07","<div class='h'>공동체 담론에서 타자의 위치와 욕망의 문제: 라캉의 용어로 다시 개념화한 장뤽 낭시의 무위의 공동체</div><div class='n'>BK21 4단계 교육연구단 전국학술대회, 건국대학교 철학과</div>"],
+    ["2022.07","<div class='h'>헤테로토피아를 통한 공동체적 공간의 가능성 탐색</div><div class='n'>BK21 4단계 교육연구단 전국학술대회, 건국대학교 철학과</div>"],
+    ["2021.10","<div class='h'>철학자와 정신분석가 사이: 철학과 정신분석의 관계에 대한 실천적 물음들</div><div class='n'>건국대학교 철학과 BK21 교육연구단 · 아주대학교 정신분석학과 공동학술대회 「치유와 공존의 시대: 정신분석과 철학」</div>"],
+    ["2021.07","<div class='h'>분석적 주체의 조건으로서의 사랑</div><div class='n'>BK21 4단계 교육연구단 전국학술대회, 건국대학교 · 제3회 동양철학 차세대 학문 대학연합 학술토론회, 성균관대학교</div>"]]),
+  hExp:"연구 경력",
+  exp:li([
+    ["2023 – 2025","<div class='h'>연구책임자</div><div class='n'>한국연구재단 2023년 인문사회분야 박사과정생 연구장려금</div>"],
+    ["2021 – 2024","<div class='h'>참여대학원생</div><div class='n'>BK21 4단계 교육연구단, 건국대학교 철학과 (2021, 2022, 2023–2024)</div>"]]),
+  hSch:"장학",
+  sch:li([
+    ["2021 – 2022","석사 예비과정 입학제도 장학금 (3학기)"],
+    ["2021, 2022","BK21 4단계 교육연구단 장학금, 건국대학교"],
+    ["2020","김정옥 교수 장학기금: 차세대 학문후속세대 지원 장학금"],
+    ["2019","김정옥 교수 장학기금: 유럽어 연수 장학금, 낭트에서 3개월 프랑스어 연수"]]),
+  hJournal:"연구 노트",
+  sample:"예시",back:"← 연구 노트 목록",empty:"아직 글이 없습니다.",
+  hContact:"연락",copy:"주소 복사",copied:"복사됨",
+  brunch:`더 많은 글은 <a href="${BRUNCH}">브런치에서 읽기 →</a>`,
+  uco:`UCO 박사과정 페이지: <a href="${UCO}">recherche.uco.fr</a><br>브런치: <a href="${BRUNCH}">brunch.co.kr/@96e2f7af998d437</a>`
+}};
+
+const $=id=>document.getElementById(id);
+const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const LANGNAME={fr:'FR',en:'EN',ko:'한'};
+let cur='fr',ART=null,OWNER=false,editingId=null,openId=null;
+
+function fmtDate(iso){
+  const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(iso||'');if(!m)return esc(iso||'');
+  return cur==='ko'?`${m[1]}.${m[2]}.${m[3]}`:`${m[3]}.${m[2]}.${m[1]}`;
+}
+const sorted=()=>[...POSTS].sort((a,b)=>(b.date||'').localeCompare(a.date||''));
+function metaHtml(p){
+  const tags=(p.tags||'').trim();
+  let host='';if(p.url){try{host=new URL(p.url).hostname.replace(/^www\./,'')}catch(e){}}
+  return `<div class="meta"><span class="badge">${LANGNAME[p.lang]||''}</span>${host?`<span class="badge">${esc(host)}</span>`:''}${p.sample?`<span class="badge sample">${T[cur].sample}</span>`:''}${tags?`<span class="tag">${esc(tags)}</span>`:''}</div>`;
+}
+function renderList(){
+  const ps=sorted();
+  $('postlist').innerHTML=ps.length?ps.map(p=>`<li><time datetime="${esc(p.date)}">${fmtDate(p.date)}</time><div class="body">${p.url?`<a class="t" href="${esc(p.url)}" target="_blank" rel="noopener">${esc(p.title)} <span aria-hidden="true">↗</span></a>`:`<button type="button" class="t" data-open="${esc(p.id)}">${esc(p.title)}</button>`}${p.summary?`<p>${esc(p.summary)}</p>`:''}${metaHtml(p)}${OWNER&&p.url?`<button type="button" class="btn small" data-edit="${esc(p.id)}">수정</button>`:''}</div></li>`).join(''):`<li><span></span><p class="empty">${T[cur].empty}</p></li>`;
+}
+function paras(text){return String(text||'').split(/\n\s*\n/).filter(s=>s.trim()).map(s=>`<p>${esc(s.trim()).replace(/\n/g,'<br>')}</p>`).join('')}
+function showView(v){$('list-view').hidden=v!=='list';$('reader').hidden=v!=='reader';}
+function openPost(id,scroll=true){
+  const p=POSTS.find(x=>x.id===id);if(!p){closePost();return}
+  openId=id;
+  $('reader').innerHTML=`<div class="actions"><button type="button" class="btn" data-back>${T[cur].back}</button>${OWNER?`<button type="button" class="btn" data-edit="${esc(p.id)}">수정</button>`:''}</div><time class="eyebrow" datetime="${esc(p.date)}">${fmtDate(p.date)}</time><h3 lang="${esc(p.lang)}">${esc(p.title)}</h3>${metaHtml(p)}<div class="text" lang="${esc(p.lang)}">${paras(p.body)}</div>`;
+  showView('reader');
+  try{history.replaceState(null,'','#post-'+id)}catch(e){}
+  if(scroll)$('journal').scrollIntoView({block:'start'});
+}
+function closePost(){openId=null;showView('list');try{history.replaceState(null,'','#journal')}catch(e){}}
+
+function setLang(l){
+  cur=T[l]?l:'fr';
+  document.documentElement.lang=cur;
+  document.querySelectorAll('[data-k]').forEach(e=>{const v=T[cur][e.dataset.k];if(v!=null)e.innerHTML=v});
+  document.querySelectorAll('.lang button').forEach(b=>b.setAttribute('aria-pressed',b.dataset.lang===cur));
+  try{localStorage.setItem('lang',cur)}catch(e){}
+  renderList(); if(openId&&!$('reader').hidden)openPost(openId,false);
+}
+
+document.addEventListener('click',e=>{
+  const t=e.target.closest('[data-open],[data-back],.lang button');
+  if(!t)return;
+  if(t.matches('.lang button'))setLang(t.dataset.lang);
+  else if(t.dataset.open)openPost(t.dataset.open);
+  else if(t.hasAttribute('data-back'))closePost();
+  });
+$('copy').addEventListener('click',e=>{
+  const b=e.currentTarget,m=$('mail');
+  navigator.clipboard.writeText(m.textContent).then(()=>{b.textContent=T[cur].copied;setTimeout(()=>b.textContent=T[cur].copy,1500)})
+  .catch(()=>{const r=document.createRange();r.selectNodeContents(m);const s=getSelection();s.removeAllRanges();s.addRange(r)});
+});
+
+let saved='fr';try{saved=localStorage.getItem('lang')||'fr'}catch(e){}
+setLang(saved);
+const hm=/^#post-([A-Za-z0-9_-]+)$/.exec(location.hash);
+if(hm)openPost(hm[1]);
+else if(location.hash.length>1){const el=document.getElementById(location.hash.slice(1));if(el)el.scrollIntoView()}
+
+</script>
+
+</body>
+</html>
