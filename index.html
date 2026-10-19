@@ -116,6 +116,8 @@ html:lang(ko) .ledger em{font-style:normal}
 .status.err{color:var(--danger)}
 
 .contact{display:flex;flex-wrap:wrap;gap:.75rem;align-items:center}
+.cvdl{margin:-.5rem 0 1.75rem;font-family:var(--mono);font-size:.8rem;color:var(--muted)}
+.cvdl a{color:var(--accent)}
 .contact code{font-family:var(--mono);font-size:.9rem;background:var(--tint);padding:.35rem .6rem;border-radius:2px;user-select:all}
 .contact .more{flex-basis:100%;font-size:.95rem}
 footer{padding-top:2rem;font-family:var(--mono);font-size:.72rem;color:var(--muted)}
@@ -155,7 +157,7 @@ footer{padding-top:2rem;font-family:var(--mono);font-size:.72rem;color:var(--mut
   </section>
 
   <section id="cv">
-    <h2 data-k="hCV">Curriculum vitae</h2>
+    <h2 data-k="hCV">Curriculum vitae</h2><p class="cvdl" data-k="cvdl">CV (PDF) : <a href="cv/CV_Hyun_Lee_FR.pdf" download>français</a> · <a href="cv/CV_Hyun_Lee_EN.pdf" download>anglais</a></p>
     <h3 class="sub" data-k="hEdu">Formation</h3><ul class="ledger" data-k="edu"><li><span class="d">2024 –</span><div class="c"><div class="h">Doctorat en psychanalyse</div><div class="n">Université Catholique de l’Ouest, Angers</div></div></li><li><span class="d">2022</span><div class="c"><div class="h">Master en philosophie occidentale</div><div class="n">Université Konkuk, Séoul · Mention Très Bien (GPA 4,31/4,5) · obtenu en 3 semestres</div><div class="n">Mémoire : <em>Le sujet-entre-deux-morts chez Jacques Lacan : l’horizon éthique du désir et de la pulsion</em> (dir. Pr Seok Kim)</div></div></li><li><span class="d">2021</span><div class="c"><div class="h">Licence en philosophie</div><div class="n">Université Konkuk, Séoul</div></div></li></ul>
     <h3 class="sub" data-k="hArt">Articles (Korea Citation Index)</h3><ul class="ledger" data-k="art"><li><span class="d">2025</span><div class="c"><div class="h">Subjectivity after Neoliberal Capitalism and the Age of Ordinary Psychosis: Lacan’s Theoretical Shift in Response to the May ’68 Revolution</div><div class="n"><em>The Journal of Contemporary Psychoanalysis</em>, vol. 27, n° 2, p. 221–256</div><div class="src"><a href="https://doi.org/10.18873/jlcp.2025.08.27.2.221">doi:10.18873/jlcp.2025.08.27.2.221</a></div></div></li><li><span class="d">2023</span><div class="c"><div class="h">Le néolibéralisme et la société psychotique : l’individu néolibéral et la disparition de l’impossible à travers le discours du capitaliste chez Lacan</div><div class="n"><em>The Journal of Contemporary Psychoanalysis</em>, vol. 25, n° 2, p. 159–194</div><div class="src"><a href="https://doi.org/10.18873/jlcp.2023.08.25.2.159">doi:10.18873/jlcp.2023.08.25.2.159</a></div></div></li><li><span class="d">2021</span><div class="c"><div class="h">L’amour comme condition du sujet analytique : centré sur le concept lacanien de « l’amour de l’analyste » et le problème de la spiritualité</div><div class="n"><em>The Journal of Contemporary Psychoanalysis</em>, vol. 23, n° 2, p. 79–109</div><div class="src"><a href="https://doi.org/10.18873/jlcp.2021.08.23.2.79">doi:10.18873/jlcp.2021.08.23.2.79</a></div></div></li></ul>
     <h3 class="sub" data-k="hTr">Traductions (français → coréen)</h3><ul class="ledger" data-k="tr"><li><span class="d">2025</span><div class="c"><div class="h"><em>Ai-je vraiment du mérite ?</em></div><div class="n">Aïda N’Diaye · éd. orig. Gallimard Jeunesse, 2022 · Éditions Dolbaenamu, Séoul</div><div class="src">ISBN 979-11-90855-48-8</div></div></li><li><span class="d">2025</span><div class="c"><div class="h"><em>Mais qu'est-ce que tu t'imagines ?</em></div><div class="n">Aurélien Robert · éd. orig. Gallimard Jeunesse, 2022 · Éditions Dolbaenamu, Séoul</div><div class="src">ISBN 979-11-90855-49-5</div></div></li><li><span class="d">2025</span><div class="c"><div class="h"><em>Est-ce que tu sais ou est-ce que tu crois ?</em></div><div class="n">Camille Riquier · éd. orig. Gallimard Jeunesse, 2022 · Éditions Dolbaenamu, Séoul</div><div class="src">ISBN 979-11-90855-51-8</div></div></li><li><span class="d">2025</span><div class="c"><div class="h"><em>Qu'est-ce qui fait mon genre ?</em></div><div class="n">Aïda N’Diaye · éd. orig. Gallimard Jeunesse, 2022 · Éditions Dolbaenamu, Séoul</div><div class="src">ISBN 979-11-90855-50-1</div></div></li></ul>
@@ -212,7 +214,7 @@ fr:{
     ["Rattachement","Laboratoire RPpsy (EA 4050), Université Catholique de l’Ouest, Angers"],
     ["Spécialités","Psychanalyse ; philosophie européenne contemporaine"],
     ["Compétences","Théorie psychanalytique ; philosophie politique et éthique ; théorie critique"]]),
-  hCV:"Curriculum vitae",hEdu:"Formation",
+  hCV:"Curriculum vitae",cvdl:`CV (PDF) : <a href="cv/CV_Hyun_Lee_FR.pdf" download>français</a> · <a href="cv/CV_Hyun_Lee_EN.pdf" download>anglais</a>`,hEdu:"Formation",
   edu:li([
     ["2024 –","<div class='h'>Doctorat en psychanalyse</div><div class='n'>Université Catholique de l’Ouest, Angers</div>"],
     ["2022","<div class='h'>Master en philosophie occidentale</div><div class='n'>Université Konkuk, Séoul · Mention Très Bien (GPA 4,31/4,5) · obtenu en 3 semestres</div><div class='n'>Mémoire : <em>Le sujet-entre-deux-morts chez Jacques Lacan : l’horizon éthique du désir et de la pulsion</em> (dir. Pr Seok Kim)</div>"],
@@ -258,7 +260,7 @@ en:{
     ["Affiliation","RPpsy Research Laboratory (EA 4050), Catholic University of the West, Angers"],
     ["Specialization","Psychoanalysis; contemporary European philosophy"],
     ["Competence","Psychoanalytic theory; political philosophy and ethics; critical theory"]]),
-  hCV:"Curriculum vitae",hEdu:"Education",
+  hCV:"Curriculum vitae",cvdl:`CV (PDF): <a href="cv/CV_Hyun_Lee_EN.pdf" download>English</a> · <a href="cv/CV_Hyun_Lee_FR.pdf" download>French</a>`,hEdu:"Education",
   edu:li([
     ["2024 –","<div class='h'>PhD in Psychoanalysis</div><div class='n'>Catholic University of the West, Angers</div>"],
     ["2022","<div class='h'>MA in Western Philosophy</div><div class='n'>Konkuk University, Seoul · Very Good (GPA 4.31/4.5) · completed in 3 semesters</div><div class='n'>Thesis: <em>The Subject between Two Deaths in Jacques Lacan: The Ethical Horizon of Desire and Drive</em> (supervisor Prof. Seok Kim)</div>"],
@@ -304,7 +306,7 @@ ko:{
     ["소속","앙제 서부가톨릭대학교(UCO) RPpsy 연구소 (EA 4050)"],
     ["전공 분야","정신분석, 현대 유럽철학"],
     ["연구 역량","정신분석 이론, 정치철학과 윤리학, 비판이론"]]),
-  hCV:"이력",hEdu:"학력",
+  hCV:"이력",cvdl:`CV (PDF) 다운로드: <a href="cv/CV_Hyun_Lee_FR.pdf" download>프랑스어</a> · <a href="cv/CV_Hyun_Lee_EN.pdf" download>영어</a>`,hEdu:"학력",
   edu:li([
     ["2024 –","<div class='h'>정신분석 박사과정</div><div class='n'>앙제 서부가톨릭대학교</div>"],
     ["2022","<div class='h'>서양철학 석사</div><div class='n'>건국대학교 · 평점 4.31/4.5 · 3학기 조기 졸업</div><div class='n'>학위논문 「자크 라캉의 두 죽음 사이-주체: 욕망과 충동의 윤리적 지평」 (지도교수 김석)</div>"],
